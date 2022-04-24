@@ -19,7 +19,7 @@ func main() {
 		book.GET("/:id", handlers.Searchbook) //fetches single book using path paramter
 		book.GET("/author", handlers.BookbyAuthor)
 
-		book.POST("/add", handlers.AddBook)
+		book.POST("/add", handlers.AddBook())
 
 		book.PATCH("/:id", handlers.UpdateBook) //upadates a given book
 
@@ -32,5 +32,5 @@ func main() {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	
+
 }
